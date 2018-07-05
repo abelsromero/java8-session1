@@ -5,9 +5,7 @@ import com.everis.digit.lambda.model.User;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Comparator;
 import java.util.List;
-import java.util.stream.Collectors;
 
 public class E01_StreamExamples_sort {
 
@@ -31,8 +29,8 @@ public class E01_StreamExamples_sort {
         System.out.println("> Good old Java");
         System.out.println(runner.oldFilter(users));
 
-        System.out.println("> With a Stream");
-        System.out.println(runner.lambdaFilter(users));
+//        System.out.println("> With a Stream");
+//        System.out.println(runner.lambdaFilter(users));
 
         System.out.println("> finish!!");
     }
@@ -53,16 +51,9 @@ public class E01_StreamExamples_sort {
         return names;
     }
 
-
-    public List<String> lambdaFilter(final List<User> users) {
-
-        return users.stream()
-            .filter(user -> user.getAge() >= 18)
-            // Use pre-build comparator
-            .sorted(Comparator.comparingInt(User::getAge))
-            .map(User::getName)
-            .collect(Collectors.toList());
-    }
+    // Sort ASC (1 - 2)
+//    public List<String> lambdaFilter(final List<User> users) {
+//    }
 
 
 }

@@ -27,8 +27,8 @@ public class E02_StreamExamples_findFirst {
         System.out.println("> Good old Java");
         System.out.println(runner.oldYoungerUser(users));
 
-        System.out.println("> With a Stream");
-        System.out.println(runner.lambdaYoungerUser(users));
+//        System.out.println("> With a Stream");
+//        System.out.println(runner.streamYoungerUser(users));
 
         System.out.println("> finish!!");
     }
@@ -49,26 +49,7 @@ public class E02_StreamExamples_findFirst {
     /**
      * How about limit?
      */
-    private User lambdaYoungerUser(List<User> users) {
-        return users.stream()
-            .filter((User user) -> {
-                /**
-                 * You can add any normal code in a lambda
-                 */
-                // System.out.println("Checking: " + user);
-                return user.getAge() >= 18;
-            })
-            .sorted((o1, o2) -> o2.getAge() - o1.getAge())
-            .findFirst()
-            .orElseThrow(() -> new IllegalArgumentException("Required at least one user"));
-    }
-
-
-    private User streamYoungerUser(List<User> users) {
-        return users.stream()
-            .sorted(Comparator.comparingInt(User::getAge))
-            .findFirst()
-            .orElseThrow(() -> new IllegalArgumentException("Required at least one user"));
-    }
+//    private User streamYoungerUser(List<User> users) {
+//    }
 
 }

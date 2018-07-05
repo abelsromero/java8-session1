@@ -19,19 +19,8 @@ public class E01_SwingExample {
 
         final Button button = new Button("Click me!!");
 
-        button.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                System.out.println("Hello from Good old Action Listener!!");
-
-            }
-        });
-        button.addActionListener(new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                handleEvent(e);
-            }
-        });
+//        button.addActionListener();
+//        button.addActionListener();
 
         frame.getContentPane().add(button, BorderLayout.CENTER);
 
@@ -47,7 +36,12 @@ public class E01_SwingExample {
     public static void main(String[] args) {
         //Schedule a job for the event-dispatching thread:
         //creating and showing this application's GUI.
-        javax.swing.SwingUtilities.invokeLater(() -> createAndShowGUI());
+        javax.swing.SwingUtilities.invokeLater(new Runnable() {
+            @Override
+            public void run() {
+                createAndShowGUI();
+            }
+        });
     }
 
 }
