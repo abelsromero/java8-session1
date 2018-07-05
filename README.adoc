@@ -1,0 +1,19 @@
+= Java 8 training (sort of...session 1)
+:icons: font
+
+This repository contains the code examples used for the sessions done on the 5th of July 2018 (Brussels).
+
+== Usage
+
+This repo just uses Maven 3 to define it's structure and manage dependencies.
+
+IMPORTANT: This project uses link:https://projectlombok.org/[Lombok].
+In order for the generated code to be use in an IDE (eclipse or IntelliJ), you'll require the installation of the appropriate IDE plugins.
+
+== Examples exploration
+
+The repository contains 3 commits:
+
+* `final version`: contains the examples completed and working.
+* `starting point`: contains the placeholder code to start writing the examples.
+* `readme`: adds this README to the project.
